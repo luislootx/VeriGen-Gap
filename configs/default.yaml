@@ -1,0 +1,47 @@
+# VeriGen-Gap Experiment Configuration
+
+# Problem sizes to test (n parameter)
+sizes:
+  small: [5, 8, 10]
+  medium: [15, 20, 25]
+  large: [30, 40, 50]
+
+# Number of instances per (problem, size) pair
+instances_per_size: 10
+
+# Number of trials per instance (for statistical significance)
+trials_per_instance: 3
+
+# LLM models to test
+models:
+  openai:
+    name: "GPT-4o-mini"
+    model_id: "gpt-4o-mini"
+  anthropic:
+    name: "Claude-Haiku"
+    model_id: "claude-haiku-4-5-20251001"
+  ollama:
+    name: "Llama-3.1-8B"
+    model_id: "llama3.1:8b"
+
+# Problems to include
+problems:
+  P:
+    - sorting
+    - shortest_path
+    - bipartite_matching
+  NP_complete:
+    - 3sat
+    - tsp_decision
+    - graph_3coloring
+
+# Verification experiment: ratio of correct vs incorrect solutions
+verification_correct_ratio: 0.5
+
+# API settings
+max_tokens: 1024
+temperature: 0.0
+
+# Output
+results_dir: "results"
+figures_dir: "figures"
