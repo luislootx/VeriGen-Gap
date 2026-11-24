@@ -368,7 +368,7 @@ def figures(res, tab, out):
             ax.plot(t["TNR"], t["TPR"], mk[m], mfc=col[m] if p in NP_ else "white", mec=col[m], ms=4.6, mew=1.0, zorder=3)
             if (m, p) in off:
                 ax.annotate(short[p], (t["TNR"], t["TPR"]), fontsize=6, xytext=off[(m, p)], textcoords="offset points", color=col[m])
-    ax.annotate("accept nearly everything:\nLlama (five problems),\nGPT-4o-mini on TSP", (0.06, 0.975), xytext=(0.31, 0.735), fontsize=6, arrowprops=dict(arrowstyle="->", lw=0.5))
+    ax.annotate("accept nearly everything:\nLlama (five problems),\nGPT-4o-mini on TSP", (0.06, 0.975), xytext=(0.31, 0.655), fontsize=6, arrowprops=dict(arrowstyle="->", lw=0.5))
     ax.set_xlabel("true negative rate (rejects incorrect certificates)", fontsize=7)
     ax.set_ylabel("true positive rate\n(accepts correct certificates)", fontsize=7)
     ax.set_xlim(-0.03, 1.27)
